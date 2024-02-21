@@ -1,4 +1,4 @@
-use std::{any::Any, collections::HashMap, io::Read};
+use std::io::Read;
 
 use clap::Parser;
 use format::Format;
@@ -8,7 +8,6 @@ mod format;
 
 fn main() -> anyhow::Result<()> {
     let args = cli::Args::parse();
-    println!("{:?}", args);
 
     // TODO: can this be done directly in clap?
     if args.in_path.is_none() && args.in_format.is_none() {
