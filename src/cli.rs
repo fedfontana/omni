@@ -11,9 +11,13 @@ pub struct Args {
     #[clap(long, short = 'o')]
     pub out_path: Option<PathBuf>,
 
+    /// If specified, the input will be treated as this format (has precedence over the inference
+    /// from the file extension)
     #[clap(long)]
     pub in_format: Option<Format>,
 
+    /// If specified, the output will be treated as this format (has precedence over the inference
+    /// from the file extension)
     #[clap(long)]
     pub out_format: Option<Format>,
 }
