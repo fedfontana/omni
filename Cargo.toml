@@ -13,3 +13,9 @@ serde = { version = "1.0.197", features = ["derive"] }
 serde_json = "1.0.114"
 serde_yaml = "0.9.32"
 toml = "0.8.10"
+
+[build-dependencies]
+anyhow = "1.0.80"
+clap = { version = "4.5.1", features = ["derive"] }
+clap_complete = "4.5.1"
+clap_mangen = "0.2.20"
