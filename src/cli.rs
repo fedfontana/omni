@@ -6,7 +6,6 @@ use crate::format::Format;
 
 #[derive(Parser, Debug)]
 pub struct Args {
-    #[clap(long, short = 'i')]
     pub in_path: Option<PathBuf>,
 
     #[clap(long, short = 'o')]
