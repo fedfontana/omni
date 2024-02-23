@@ -5,6 +5,7 @@ use clap::{error::ErrorKind, CommandFactory, Parser};
 use crate::format::Format;
 
 #[derive(Parser, Debug)]
+#[command(about)]
 pub struct Args {
     /// The input file to convert. If not specified, the input will be read from stdin
     pub in_path: Option<PathBuf>,
