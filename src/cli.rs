@@ -6,18 +6,20 @@ use crate::format::Format;
 
 #[derive(Parser, Debug)]
 pub struct Args {
+    /// The input file to convert. If not specified, the input will be read from stdin
     pub in_path: Option<PathBuf>,
 
+    /// The output file to write to. If not specified, the output will be written to stdout
     #[clap(long, short = 'o')]
     pub out_path: Option<PathBuf>,
 
     /// If specified, the input will be treated as this format (has precedence over the inference
-    /// from the file extension)
+    /// from the file extension). Required when reading from stdin
     #[clap(long, alias = "if")]
     pub in_format: Option<Format>,
 
     /// If specified, the output will be treated as this format (has precedence over the inference
-    /// from the file extension)
+    /// from the output file extension). Required when writing to stdout
     #[clap(long, alias = "of")]
     pub out_format: Option<Format>,
 }

@@ -1,7 +1,10 @@
 [package]
-name = "omni"
+name = "omni-cli"
 version = "0.1.0"
 edition = "2021"
+license-file = "LICENSE"
+description = "A simple CLI for converting between commonly used configuration file formats."
+repository = "https://github.com/fedfontana/omni"
 
 [dependencies]
 anyhow = "1.0.80"
@@ -11,3 +14,7 @@ serde = { version = "1.0.197", features = ["derive"] }
 serde_json = "1.0.114"
 serde_yaml = "0.9.32"
 toml = "0.8.10"
+
+[[bin]]
+name = "omni"
+path = "src/main.rs"
